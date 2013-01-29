@@ -1,0 +1,52 @@
+<interface>
+	<name>SNMP - Postfix Instance Queues</name>
+	<oid_index>.1.3.6.1.4.1.2021.55.1</oid_index>
+    <index_order>instDescr:instIndex</index_order>
+	<index_title_format>|host_description| - Posfix Instance queues</index_title_format>
+    <index_order_type>numeric</index_order_type>
+
+	<fields>
+        <instIndex>
+            <name>Index</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>input</direction>
+            <oid>.1.3.6.1.4.1.2021.55.1</oid>
+        </instIndex>
+        <instDescr>
+            <name>Description</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>input</direction>
+            <oid>.1.3.6.1.4.1.2021.55.2</oid>
+        </instDescr>
+        <DeferredQueue>
+            <name>Deferred queue</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>output</direction>
+            <oid>.1.3.6.1.4.1.2021.55.6.1</oid>
+        </DeferredQueue>
+        <ActiveQueue>
+            <name>Active queue</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>output</direction>
+            <oid>.1.3.6.1.4.1.2021.55.6.2</oid>
+        </ActiveQueue>
+        <IncomingQueue>
+            <name>Incoming queue</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>output</direction>
+            <oid>.1.3.6.1.4.1.2021.55.6.3</oid>
+        </IncomingQueue>
+        <HoldQueue>
+            <name>Hold queue</name>
+            <method>walk</method>
+            <source>value</source>
+            <direction>output</direction>
+            <oid>.1.3.6.1.4.1.2021.55.6.4</oid>
+        </HoldQueue>
+	</fields>
+</interface>
